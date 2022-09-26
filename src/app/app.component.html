@@ -1,0 +1,105 @@
+<div class="container-fluid">
+
+  <!-- Overall Application structure here.. -->
+
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <span class="d-none d-sm-inline">{{title}}<span class="d-none d-md-inline"> ({{acronym}})</span></span>
+      <span class="d-inline d-sm-none">{{acronym}}</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id = "peopleDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            People <span class="sr-only">(current)</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="peopleDropdown">
+            <a class="dropdown-item" href="principal_investigator">{{princInvestigator}}</a>
+            <a class="dropdown-item" href="students/current_students">Current Students</a>
+            <a class="dropdown-item" href="#">Past Students</a>
+            <!-- <a class="dropdown-item" href="#">Power Grid Control</a>
+            <a class="dropdown-item" href="#">Atomic Force Microscopy</a> -->
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" *ngFor = "let project of projectList" href="#">{{project}}</a>
+            <!-- <a class="dropdown-item" href="#">Power Grid Control</a>
+            <a class="dropdown-item" href="#">Atomic Force Microscopy</a> -->
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+      <div class="dropdown-divider d-xl-none"></div>
+      <span class="navbar-text ml-auto">PI: <span style="font-weight: bold;">{{princInvestigator}}</span></span>
+      
+    </div>
+  </nav>
+
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div class="container-fluid mt-2 content">
+
+  <!-- here comes the main content of the application with the routing outlet to the components...-->
+
+  <div class="row content-inside">
+
+    <div class="col-xs-12 col-lg-10 col-xl-10 float-left mt-2">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-xs-12 col-lg-2 text-center mt-2">
+      <div class="card">
+          <!-- <div class="card-body">
+              <h4 class="class-title"> News</h4>
+          </div> -->
+          <div class="card-header">News</div>
+          <ul class="list-group list-group-flush" style="font-size: 80%;">
+              <li class="list-group-item">Test Item 1</li>
+              <li class="list-group-item">Test Item 2</li>
+              <li class="list-group-item">Test Item 3</li>
+              <li class="list-group-item">Test Item 4</li>
+          </ul>
+      </div>
+  </div>
+
+  </div>
+
+  <!-- <router-outlet></router-outlet> -->
+
+</div>
+
+<div class="container-fluid mt-1 footer"> <!--fixed-bottom--> <!--[class.fixed-bottom] = "true"-->
+
+  <div  class="row bg-light">
+    <div class="col-xs-12 col-md-4 text-center">Mechanical Engineering, UIUC</div>
+    <div class="col-xs-12 col-md-4 text-center">&copy;{{princInvestigator}}, All&nbsp;Right&nbsp;Reserved.</div>
+    <div class="d-none d-md-inline col-md-4 text-right"> <span class="fa fa-map-marker-alt"></span> 1204 MEL, UIUC</div>
+  </div>
+
+</div>
+

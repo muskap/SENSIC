@@ -1,0 +1,13 @@
+.content {
+    min-height: 100%;
+}
+
+.content-inside {
+    /* padding: 20px; */
+    padding-bottom: 50px;
+}
+
+.footer {
+    height: auto;
+    margin-top: -50px;
+}
