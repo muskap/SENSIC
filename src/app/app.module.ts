@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { PincInvestComponent } from './pinc-invest/pinc-invest.component';
 import { StudentsComponent } from './students/students.component';
 import { StudentSnippetComponent } from './student-snippet/student-snippet.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectSnippetComponent } from './project-snippet/project-snippet.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { StudentSnippetComponent } from './student-snippet/student-snippet.compo
     HomeComponent,
     PincInvestComponent,
     StudentsComponent,
-    StudentSnippetComponent
+    StudentSnippetComponent,
+    ProjectComponent,
+    ProjectSnippetComponent
   ],
   imports: [
     BrowserModule,

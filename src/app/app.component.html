@@ -20,7 +20,7 @@
           <div class="dropdown-menu" aria-labelledby="peopleDropdown">
             <a class="dropdown-item" href="principal_investigator">{{princInvestigator}}</a>
             <a class="dropdown-item" href="students/current_students">Current Students</a>
-            <a class="dropdown-item" href="#">Past Students</a>
+            <a class="dropdown-item" href="students/past_students">Past Students</a>
             <!-- <a class="dropdown-item" href="#">Power Grid Control</a>
             <a class="dropdown-item" href="#">Atomic Force Microscopy</a> -->
           </div>
@@ -30,7 +30,7 @@
             Projects
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" *ngFor = "let project of projectList" href="#">{{project}}</a>
+            <a class="dropdown-item" *ngFor = "let project of projectList" href="projects/{{project}}">{{project}}</a>
             <!-- <a class="dropdown-item" href="#">Power Grid Control</a>
             <a class="dropdown-item" href="#">Atomic Force Microscopy</a> -->
           </div>

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-home',
@@ -19,21 +20,9 @@ export class HomeComponent implements OnInit {
                                 {src: '../../assets/testSlide.svg', cap_head:'Some Picture 1', cap_sub: 'Something here'},
   {src: '../../assets/testSlide.svg', cap_head:'Some Picture 2', cap_sub: 'something else entirely'}];
 
-  //for now define the json pi_details jso filepath here..
-  private pi_details_path: string = 'assets/pi_description.json';
-  public pi_name:string = '';
-
   
   private _jsonURL = 'assets/pi_description.json';
-  constructor(private http: HttpClient) {
-    //subscribe to the data reception event....
-    this.getJSON().subscribe(data => {
-      console.log(data);
-      this.pi_name = data.firstName + ' '+ data.lastName;
-    });
-  }
-  public getJSON(): Observable<any> {
-    return this.http.get(this.pi_details_path);
+  constructor(private dataService : DataServiceService) {
   }
 
   ngOnInit() {
