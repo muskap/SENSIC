@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Bio/Nano-Scale Investigation Systems and Control",
+        "link_name": "bio-nano-investigation",
+        "description": "Here emphasis is on developing frameworks for modeling and analyzing systems at nanoscales, and, developing new instrumentation and methodologies for investigation and nano-manipulation. In particular my group has made significant contributions in modeling, analysis, and control, thereby enhancing and engendering new capabilities for scanning probe microscopy. We leverage control systems and instrumentation expertise developed in our lab toward scientific studies, especially studying intracellular protein motion."
+    },
+    {
+        "name": "Power Systems and Control",
+        "link_name":"power-systems-ontrol",
+        "description": "Here we aim a comprehensive framework for developing and implementing smart-grid technologies capable of harnessing much more power from renewable (though) uncertain power sources while guaranteeing grid stability and satisfying economic power sharing constraints. Our research aims at design, implementation, and analysis of a power-electronics based grid that enables distributed generation, prioritization, and integration of heterogeneous power sources; while incorporating objectives related to economics and reliability. We have applied modern systems techniques for developing control of power-grid/ power electronics technologies, and has played a central role in designing, developing, and testing new systems."
+    },
+    {
+        "name": "Data/Network Optimization",
+        "link_name": "data-network-optimization",
+        "description": "Here we are developing frameworks for designing algorithms to efficiently solve combinatorial optimization problems that arise in data/network classification and aggregation, resource allocation, routing, and sequential decision making problems. Many of these problems have non convex cost functions that are riddled with multiple local minima, and are proved to be computationally complex (NP-hard). We are developing a comprehensive framework where we address the combinatorial computational complexity, variability in associated clustering or coverage cost functions, area-specific constraints on the network structure, communication, and dynamics of constituent elements and their interactions or interdependencies. The central idea of our framework is based on maximum entropy principle (MEP) from statistics and minimum free energy principle from thermodynamics (it mimics statistical mechanical solutions to similar combinatorial problems that occur in nature)."
+    },
+    {
+        "name": "Thermal Systems",
+        "link_name": "thermal_systems",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "name": "Fouling Control",
+        "link_name": "fouling-control",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "name": "Miscellaneous",
+        "link_name": "misc",
+        "description": ""
+    }
+]
+

@@ -1,0 +1,17 @@
+{
+    "firstName": "Srinivasa",
+    "lastName": "Salapaka",
+    "middleName": "M",
+    "shortName": "Vasu",
+    "designation": "Professor",
+    "department": "Mechanical Science and Engineering",
+    "office": "367 CSL,1308 West Main St. Urbana, IL 61801",
+    "telephone": "+1 217 244 4172",
+    "fax": "+1 217 244 4172",
+    "email":"salapaka@illinois.edu",
+    "affiliations": ["Electrical Science and Engnineering", "Computer Science"],
+    "Research_Interests": "Control Systems, Nanopositioning Systems and Control, Optimization, Reinforcement Learning",
+    "Description": "Description Here from a third person viewpoint (Indirect Speech)"
+
+}
+
