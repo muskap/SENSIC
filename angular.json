@@ -32,7 +32,10 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/fontawesome/js/all.min.js"
+              "src/fontawesome/js/all.min.js",
+              "src/assets/fontawesome-free-6.2.0-web/js/brands.js",
+              "src/assets/fontawesome-free-6.2.0-web/js/solid.js",
+              "src/assets/fontawesome-free-6.2.0-web/js/fontawesome.js"
             ]
           },
           "configurations": {
@@ -102,6 +105,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

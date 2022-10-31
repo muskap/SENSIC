@@ -1,8 +1,11 @@
 <h3>Current Students</h3>
-<app-student-snippet></app-student-snippet>
+<div class="card-deck">
+    <app-student-snippet *ngFor="let student of student_list" [studentFName]="student.firstName" [studentLName]="student.lastName"></app-student-snippet>
+</div>
+<!-- <app-student-snippet></app-student-snippet>
 <app-student-snippet></app-student-snippet>
 <app-student-snippet></app-student-snippet>
 <h3 class="mb-1">Past Students</h3>
 <app-student-snippet></app-student-snippet>
 <app-student-snippet></app-student-snippet>
-<app-student-snippet></app-student-snippet>
+<app-student-snippet></app-student-snippet> -->

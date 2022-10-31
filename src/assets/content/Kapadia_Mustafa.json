@@ -1,0 +1,19 @@
+{
+    "firstName":"Mustafa",
+    "lastName": "Kapadia",
+    "isPastStudent": "False",
+    "currentPosition": "",
+    "level": "M.S.",
+    "department": "Mechanical Engineering",
+    "email": "kapadia5@illinois.edu",
+    "image_path": "Kapadia_Mustafa.jpg",
+    "profiles": {
+        "website": "",
+        "linkedin": "https://www.linkedin.com/in/mustafakapadia89",
+        "github": "https://www.github.com/muskap"
+    },
+    "acad_history": [
+        {"year": "2018", "level": "B.Tech", "department": "Mechanical Engineering", "institute":"V.J.T.I"}
+    ],
+    "researh_interests": [ "Optimization", "System Identification", "Machine Learning", "Reinforcement Learning"]
+}

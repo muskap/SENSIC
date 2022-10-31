@@ -20,7 +20,8 @@ const routes: Routes = [
   ]},
   {path: 'students/current_students', component: StudentsComponent},
   {path: 'students/past_students', component: StudentsComponent},
-  {path: 'projects/:projectname', component: ProjectComponent},
+  {path: 'projects', component: ProjectComponent},
+  {path: 'projects/:project_link_name', component: ProjectComponent},
 ];
 
 @NgModule({

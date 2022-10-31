@@ -12,7 +12,7 @@ export class AppComponent {
   public title:String = 'System Engineering Lab for Nanoscale Investigation and Control';
   public acronym:String = 'SENSIC';
   public static PIEmail:String = 'salap2@illinois.edu';
-  public projectList: string[] = [];
+  public projectList = [{name: "", link_name:""}];
   public princInvestigator:string;
 
   constructor(private dataService : DataServiceService) {
@@ -27,6 +27,8 @@ export class AppComponent {
     this.dataService.getProjects().subscribe((data) => {
       console.log(data);
       this.projectList = data;
+      console.log(this.projectList[0].name);
+      
     });
   }
   

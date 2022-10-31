@@ -10,13 +10,16 @@
             <div class="col-xs-12 col-md-6 col-lg-8">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 mb-1">
-                        <h3 class="card-title">
+                        <h4 class="card-title font-weight-normal" style="color: rgb(34, 80, 129)">
                             Srinivasa Salapaka
-                        </h3>
-                        <h4 class = "card-subtitle mt-1 text-muted"> {{pi_data.designation}},</h4>
-                        <h4 class="card-subtitle mt-1 text-muted"> {{pi_data.department}}</h4>
+                        </h4>
+                        <h5  class = "card-subtitle mt-1 text-muted font-weight-normal"> {{pi_data.designation}},</h5>
+                        <h5  class="card-subtitle mt-1 text-muted font-weight-normal"> {{pi_data.department}}</h5>
+                        <h5 class="card-subtitle mt-1 text-muted font-weight-normal"> Industrial Science and Engineering</h5>
+                        <h5  class="card-subtitle mt-1 text-muted font-weight-normal"> Electrical Engineering page</h5>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 mb-1">
+                    <h5 class="col-xs-12 col-sm-12 card-subtitle mt-2">Contact</h5>
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-1 mb-1">
                         <span class="fa fa-location-arrow"></span>  {{pi_data.office}}
                     </div>
                     <div class="mb-1 col-xs-12 col-sm-4 col-md-6 col-lg-4">
@@ -30,13 +33,13 @@
                     <div class="mb-1 d-inline d-md-none d-lg-inline col-sm-4 col-lg-4">
                         <a href="fax:+1 217 244 4172" class="card-link"><span class="fa fa-fax"></span>&nbsp;{{pi_data.fax}}</a>
                     </div>
-                    <div class="mb-1 col-xs-12 col-sm-4 col-md-6 col-lg-4">
+                    <!-- <div class="mb-1 col-xs-12 col-sm-4 col-md-6 col-lg-4">
                         <h4 class="card-subtitle">
                             <a href="http://salapaka.web.engr.illinois.edu/resume_Salapaka.pdf" class="badge badge-light text-sm"> <span class="fa fa-file-pdf"></span> CV</a>
                         </h4>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="mb-1 col-xs-12 col-sm-4 col-md-6">
                         <h4 class="card-subtitle text-muted">Research Areas</h4>
                         <ul>
@@ -51,7 +54,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -60,7 +63,24 @@
 <div class="card mt-2">
 
     <div class="card-body">
-        
+
+        <div class="row">
+            <div class="mb-1 col-xs-12 col-sm-4 col-md-6">
+                <h4 class="card-subtitle text-muted">Research Areas</h4>
+                <ul>
+                    <li *ngFor = "let area of researchAreas">{{area}}</li>
+                </ul>
+            </div>
+            <div class="mb-1 col-xs-12 col-sm-4 col-md-6">
+                <h4 class="card-subtitle text-muted">Teaching</h4>
+                <ul>
+                    <li *ngFor = "let area of teachingAreas">
+                        <a [href]="area.link" target="_blank" rel="noopener noreferrer">{{area.code}}:{{area.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <h3 class="card-title">Biography</h3>
         <p class="card-text">Some Description here....</p>
 

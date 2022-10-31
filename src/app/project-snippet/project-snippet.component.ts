@@ -12,7 +12,8 @@ export class ProjectSnippetComponent implements OnInit {
     {title: "Paper 2", author:"Someone", link: "http://salapaka.web.engr.illinois.edu/resume_Salapaka.pdf"},
     {title: "Paper 2", author:"Someone", link: "http://salapaka.web.engr.illinois.edu/resume_Salapaka.pdf"},
   ]
-  @Input() title = ''; // decorate the property with @Input()
+  @Input() title:any; // decorate the property with @Input()
+  @Input() activeProject:any;
 
   constructor() { }
 

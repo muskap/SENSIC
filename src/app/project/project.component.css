@@ -1,0 +1,54 @@
+.card-group_mod {
+    display: flex;
+    flex-direction: column;
+}
+
+.adaptwidth{
+    width: 100%;
+    transition: width 0.25s ease-in-out;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.fullwidth{
+    width: 100%;
+    transition: width 0.25s ease-in-out;
+}
+
+.nowidth{
+    width: 0%;
+    transition: width 0.25s ease-in-out;
+}
+
+@media (min-width: 576px) {
+
+    .card-group_mod {
+        flex-flow: row wrap;
+    }
+
+    .adaptwidth{
+        width: 50%;
+        transition: width 0.25s ease-in-out;
+    }
+
+    .card-group_mod>.card:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .card-group_mod>.card {
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+
+    .adaptwidth{
+        width: 25%;
+        transition: width 0.25s ease-in-out;
+    }
+
+}
