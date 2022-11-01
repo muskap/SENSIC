@@ -5,13 +5,24 @@
     "shortName": "Vasu",
     "designation": "Professor",
     "department": "Mechanical Science and Engineering",
-    "office": "367 CSL,1308 West Main St. Urbana, IL 61801",
+    "department_url": "https://www.mechse.illinois.edu/",
+    "office": "367 Coordinated Sciences Lab,1308 West Main St. Urbana, IL 61801",
+    "offile_url" : "https://www.csl.illinois.edu",
     "telephone": "+1 217 244 4172",
     "fax": "+1 217 244 4172",
     "email":"salapaka@illinois.edu",
-    "affiliations": ["Electrical Science and Engnineering", "Computer Science"],
+    "affiliations": [
+        {"name": "Aerospace Engineering","url": "https://www.aerospace.illinois.edu/"},
+        {"name": "Electrical and Computer and Engnineering","url": "https://www.ece.illinois.edu"},
+        {"name": "Industrial & Enterprise Systems Engineering", "url": "https://www.ise.illinois.edu"}
+    ],
     "Research_Interests": "Control Systems, Nanopositioning Systems and Control, Optimization, Reinforcement Learning",
-    "Description": "Description Here from a third person viewpoint (Indirect Speech)"
+    "Description": "Description Here from a third person viewpoint (Indirect Speech)",
+    "profiles" : {
+        "google_scholar": "https://scholar.google.com/citations?user=55RQlcoAAAAJ&hl=en&oi=ao",
+        "linkedin": "https://www.linkedin.com/in/srinivasa-salapaka-5403b77/",
+        "availability_calender": "https://outlook.office365.com/calendar/published/60e2aed08c904fa9afe6abb338e29f26@illinois.edu/a60fc1eebcb5453da007127fa0814fd715288465972219773719/calendar.html"
+    }
 
 }
 

@@ -1,0 +1,19 @@
+{
+    "firstName":"Alireza",
+    "lastName": "Askarian",
+    "isPastStudent": "False",
+    "currentPosition": "",
+    "level": "Ph.D.",
+    "department": "Mechanical Engineering",
+    "email": "aliraza@oillinois.edu",
+    "image_path": "Askarian_Alireza.jpg",
+    "profiles": {
+        "website": "https://www.researchgate.net/profile/Alireza_Askarian",
+        "linkedin": "",
+        "github": ""
+    },
+    "acad_history": [
+        {"year": "", "level": "", "department": "", "institute":""}
+    ],
+    "researh_interests": []
+}

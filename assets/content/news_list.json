@@ -1,0 +1,44 @@
+[
+    {
+        "news_title": "Amber joins Automatic Control Laboratory at ETH Zurich as a postdoctoral researcher.",
+        "news_content": "",
+        "news_image_path": "Srivastava_Amber.jpeg",
+        "news_date": "August 2021" ,
+        "news_link": ""
+    },
+    {
+        "news_title": "Amber Srivastava defends his Ph.D. Thesis.",
+        "news_content": "Titled - ''Parameterized Sequential Decision Making Problems''",
+        "news_image_path": "",
+        "news_date": "June 2021" ,
+        "news_link": ""
+    },
+    {
+        "news_title": "Raj Kiriti Velicheti receives Master's degree in MechSE",
+        "news_content": "Thesis titled - '''A Control System Viewpoint for Manipulating Heat Equation and Maximum Entropy Principle for Design of Experiments'''.",
+        "news_image_path": "",
+        "news_date": "May 2021" ,
+        "news_link": ""
+    },
+    {
+        "news_title": "Mayank Baranwal (Scientist TCS Research, PhD'18) join's IIT Bombay, India as Adjunct Professor.",
+        "news_content": "",
+        "news_image_path": "",
+        "news_date": "January 2021" ,
+        "news_link": ""
+    },
+    {
+        "news_title": "UIUC, ZJUI to create smart, flexible manufacturing networks",
+        "news_content": "Our proposal “Adaptive, Resilient Cyberphysical Manufacturing Networks”, has been selected as the top ranked proposal in the area of Engineering Sciences for Flexible Manufacturing.",
+        "news_image_path": "cyman.png",
+        "news_date": "July 2020" ,
+        "news_link": "https://csl.illinois.edu/news/uiuc-zjui-create-smart-flexible-manufacturing-networks"
+    },
+    {
+        "news_title": "Salar Basiri joins the group",
+        "news_content": "",
+        "news_image_path": "",
+        "news_date": "August 2021" ,
+        "news_link": ""
+    }
+]
