@@ -22,4 +22,14 @@ export class StudentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //user can filter students based on whether they are current or not...
+  public filterPresentStudents(){
+    return this.student_list.filter(x => x.isPastStudent == 'False');
+  }
+  public filterPastStudents(){
+    // console.log(this.student_list[0]);
+    // console.log("PastStudents", this.student_list.filter(x => x.isPastStudent))
+    return this.student_list.filter(x => x.isPastStudent == 'True');
+  }
+
 }

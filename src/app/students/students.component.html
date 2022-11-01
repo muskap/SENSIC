@@ -1,6 +1,10 @@
 <h3>Current Students</h3>
 <div class="card-deck">
-    <app-student-snippet *ngFor="let student of student_list" [studentFName]="student.firstName" [studentLName]="student.lastName"></app-student-snippet>
+    <app-student-snippet *ngFor="let student of filterPresentStudents()" [studentFName]="student.firstName" [studentLName]="student.lastName"></app-student-snippet>
+</div>
+<h3 class="mt-2">Past Students</h3>
+<div class="card-deck">
+    <app-student-snippet *ngFor="let student of filterPastStudents()" [studentFName]="student.firstName" [studentLName]="student.lastName"></app-student-snippet>
 </div>
 <!-- <app-student-snippet></app-student-snippet>
 <app-student-snippet></app-student-snippet>
