@@ -1,0 +1,7 @@
+[
+    {"firstName": "Alireza", "lastName": "Askarian", "isPastStudent":"False"},
+    {"firstName": "Jaesang", "lastName": "Park", "isPastStudent":"False"},
+    {"firstName": "Jaesang", "lastName": "Park", "isPastStudent":"True"},
+    {"firstName": "Mustafa", "lastName": "Kapadia", "isPastStudent":"False"}
+
+]
