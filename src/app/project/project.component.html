@@ -1,21 +1,23 @@
-<h3 *ngIf ="this.activeProject != null"> Research Overview : {{filterActiveProject()[0].name}}</h3>
+<div id="activeResearch" #activeResearch>
+  <h3 *ngIf ="this.activeProject != null"> Research Overview : {{filterActiveProject()[0].name}}</h3>
 
-<div class="card-group_mod" #search>
-    <div *ngFor="let research of filterActiveProject()" class="card mt-1 fullwidth">
-      <img src="/assets/content/testSlide.svg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <!-- <h5 class="card-title" [class.clickable] = "project.link_name !=activeProject" (click)="toggleActive(project.link_name, $event)">{{project.name}}</h5> -->
-        <p *ngIf="research.link_name == activeProject" class="card-text">{{research.description}}</p>
+  <div class="card-group_mod">
+      <div *ngFor="let research of filterActiveProject()"  class="card mt-1 fullwidth">
+        <img src="/assets/content/testSlide.svg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title" [class.clickable] = "project.link_name !=activeProject" (click)="toggleActive(project.link_name, $event)">{{project.name}}</h5> -->
+          <p *ngIf="research.link_name == activeProject" class="card-text">{{research.description}}</p>
+        </div>
+        <div class="card-footer clickable" style="padding:2px;" (click)="toggleActive(research.link_name, $event, true)">
+          <!-- <small class="text-muted float-right" *ngIf = "project.link_name != activeProject">
+              Show More <span class="fa fa-expand-arrows-alt"></span>
+          </small> -->
+          <small class="text-muted float-right" *ngIf = "research.link_name == activeProject">
+              Show less <span class="fa fa-compress-alt"></span>
+          </small>
+        </div>
       </div>
-      <div class="card-footer clickable" style="padding:2px;" (click)="toggleActive(research.link_name, $event, true)">
-        <!-- <small class="text-muted float-right" *ngIf = "project.link_name != activeProject">
-            Show More <span class="fa fa-expand-arrows-alt"></span>
-        </small> -->
-        <small class="text-muted float-right" *ngIf = "research.link_name == activeProject">
-            Show less <span class="fa fa-compress-alt"></span>
-        </small>
-      </div>
-    </div>
+  </div>
 </div>
 
 <h3 class="mt-1"> <span *ngIf ="this.activeProject != null">Other</span> Research</h3>

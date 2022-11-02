@@ -54,7 +54,7 @@
             <a [routerLink]="'/principal_investigator'" class="btn btn-light">See Bio <span class="fa-solid fa-chevron-right"></span></a>
           </div>
         </div>
-        <div class="card mt-2">
+        <div class="card mt-2" id="addressTarget" #addressTarget>
           <div class="card-body text-center">
             <h5 class="card-text font-weight-normal">Address</h5>
             <h6 class="card-text text-muted font-weight-normal"><a class="text-muted" href="https://csl.illinois.edu" target="_blank" rel="noopener noreferrer">{{pi_data.office}}</a></h6>
@@ -79,7 +79,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ni.news_title}} </h5>
       <p *ngIf = "ni.news_content" class="card-text">{{ni.news_content}}</p>
-      <a *ngIf="ni.news_Link" [href]="ni.news_link" target="_blank" rel="noopener noreferrer">
+      <a *ngIf="ni.news_link != ''" [href]="ni.news_link" target="_blank" rel="noopener noreferrer">
         <small>Read More <i class="fa-solid fa-chevron-right"></i></small>
       </a>
       <p class="card-text text-center"><small class="text-muted">{{ni.news_date}}</small></p>
@@ -154,3 +154,5 @@
       </div>
     </div>
   </div>
+
+  <!-- <button id="clickBtn" #clickBtn class="btn btn-secondary" (click)="scroll(addressTarget)">Click Me Please!</button> -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 // import { pi_details} from '../../assets/pi_description.json';
 
 import { HttpClient } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { DataServiceService } from '../data-service.service';
   styleUrls: ['./home.component.css'],
   
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   //data member definitions here..
   //define the array of images for the carousel...and their explanations...
@@ -24,6 +24,18 @@ export class HomeComponent implements OnInit {
   public images_base_path:string = "";
   
   private _jsonURL = 'assets/pi_description.json';
+
+  @ViewChild('addressTarget') addressTarget: any;
+
+  ngAfterViewInit() {
+    console.log('AddressTarget on Home Page')  
+    console.log(this.addressTarget.nativeElement);
+
+    var test:HTMLElement | null = document.getElementById('addressTarget');
+    console.log(test);
+    // this.scroll(test);
+  }
+
   constructor(private dataService : DataServiceService) {
 
     this.dataService.getPIData().subscribe(data => {
@@ -61,8 +73,14 @@ export class HomeComponent implements OnInit {
 
     var body = document.getElementsByTagName("body");
     console.log(body[0].scrollHeight > window.innerHeight);
+
+    //try scrolling to the address
+    // console.log(this.addressTarget);
+    // this.scroll(this.addressTarget);
   }
 
-  //define a function to sort the 
+  public scroll(el: HTMLElement|null) {
+    el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 
 }
