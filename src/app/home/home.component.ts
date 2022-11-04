@@ -2,8 +2,10 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '
 // import { pi_details} from '../../assets/pi_description.json';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { interval, Observable, timeout } from 'rxjs';
 import { DataServiceService } from '../data-service.service';
+
+import $ from "jquery";
 
 @Component({
   selector: 'app-home',
@@ -27,15 +29,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('addressTarget') addressTarget: any;
 
-  ngAfterViewInit() {
-    console.log('AddressTarget on Home Page')  
-    console.log(this.addressTarget.nativeElement);
-
-    var test:HTMLElement | null = document.getElementById('addressTarget');
-    console.log(test);
-    // this.scroll(test);
-  }
-
   constructor(private dataService : DataServiceService) {
 
     this.dataService.getPIData().subscribe(data => {
@@ -56,10 +49,51 @@ export class HomeComponent implements OnInit, AfterViewInit {
       // console.log(data);
       this.news_items = data;
       console.log("News Items: ", data);
+      console.log($('.carousel .carousel-item'));
     });
 
     //also get the base path for the images from the data service..
     this.images_base_path = this.dataService.getImagesBasePath();
+
+  }
+
+  //define function to set up the rolling news....
+  private newsSetup(): void{
+
+    let items  = document.querySelectorAll('.carousel .carousel-item');
+    console.log(items);
+    items.forEach(el => {
+      // console.log(el);
+      let next = el.nextElementSibling;
+      for(var i=1; i < 4; i++){
+        if(!next){
+          next = items[0];
+        }
+        let cloneChild = next.cloneNode(true);
+        // console.log('Next One:', cloneChild.childNodes[0])
+        el.appendChild(cloneChild.childNodes[0]);
+        next = next.nextElementSibling;
+      }
+    });
+
+  }
+
+  ngAfterViewInit() {
+    console.log('AddressTarget on Home Page')  
+    console.log(this.addressTarget.nativeElement);
+
+    var test:HTMLElement | null = document.getElementById('addressTarget');
+    console.log(test);
+    // this.scroll(test);
+
+    let items = document.querySelectorAll('.carousel .carousel-item');
+    console.log(items);
+    setTimeout(() => {
+      console.log('Hello world');
+      // let items = document.querySelectorAll('.carousel .carousel-item');
+      // console.log(items);
+      this.newsSetup();
+    }, 1000);
 
   }
 
@@ -77,6 +111,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     //try scrolling to the address
     // console.log(this.addressTarget);
     // this.scroll(this.addressTarget);
+
   }
 
   public scroll(el: HTMLElement|null) {

@@ -23,7 +23,7 @@
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
+                      <div class="carousel-it active">
                         <img class="d-block w-100" [src]="images_base_path + '/' + carouselImages[0].src" alt="First slide">
                       </div>
                       <!-- <div class="carousel-item">
@@ -73,7 +73,47 @@
 
 <h2 class="text-center my-4">Recent News</h2>
 
-<div class="card-columns">
+
+<div class="row mx-auto mb-2">
+  <div id="recipeCarousel" class="carousel slide w-100 clearfix" data-ride="carousel" data-interval="5000">
+      <div class="carousel-inner" role="listbox">
+          <div *ngFor="let ni of news_items; let i = index" class="carousel-item" [class.active] ="i == 0">
+              <div class="col-md-4">
+                <div class="card" style="height: 650px;">
+                  <div class="align-bottom">
+                    <div class="cropped-ofp mx-auto">
+                      <img *ngIf = "ni.news_image_path" class="card-img-top" [src]="this.images_base_path+'/'+ ni.news_image_path" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                      <div style="height: 100px;">
+                        <h5 class="card-title text-news-title">{{ni.news_title}} </h5>
+                      </div>
+                      <div style="height: 150px;">
+                        <p *ngIf = "ni.news_content text-news-content" class="card-text">{{ni.news_content}}</p>
+                      </div>
+                      <div style="height: 20px;">
+                        <a *ngIf="ni.news_link != ''" [href]="ni.news_link" target="_blank" rel="noopener noreferrer">
+                          <small>Read More <i class="fa-solid fa-chevron-right"></i></small>
+                        </a>
+                      </div>
+                      <p class="card-text text-center"><small class="text-muted">{{ni.news_date}}</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev bg-transparemt w-aut" href="#recipeCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next bg-transparemt w-aut" href="#recipeCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+  </div>
+</div>
+
+
+<!-- <div class="card-columns">
   <div class="card mx-auto" *ngFor ="let ni of news_items">
     <img *ngIf = "ni.news_image_path" class="card-img-top" [src]="this.images_base_path+'/'+ ni.news_image_path" alt="Card image cap">
     <div class="card-body">
@@ -85,74 +125,61 @@
       <p class="card-text text-center"><small class="text-muted">{{ni.news_date}}</small></p>
     </div>
   </div>
-  <!-- <div class="card">
-      <img *ngIf = "true" class="card-img-top" src="../../assets/content/cyman.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">UIUC, ZJUI to create smart, flexible manufacturing networks </h5>
-        <p *ngIf = "true" class="card-text">Our proposal “Adaptive, Resilient Cyberphysical Manufacturing Networks”, has been selected 
-          as the top ranked proposal in the area of Engineering Sciences for Flexible Manufacturing.
-        </p>
-        <a *ngIf="true" href="https://csl.illinois.edu/news/uiuc-zjui-create-smart-flexible-manufacturing-networks" target="_blank" rel="noopener noreferrer">
-          <small>Read More <i class="fa-solid fa-chevron-right"></i></small>
-        </a>
-        <p class="card-text text-center"><small class="text-muted">July 2020</small></p>
-      </div>
-  </div> -->
-    <div class="card p-3">
-      <blockquote class="blockquote mb-0 card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card bg-primary text-white text-center p-3">
-      <blockquote class="blockquote mb-0">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-        <footer class="blockquote-footer">
-          <small>
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="..." alt="Card image">
-    </div>
-    <div class="card p-3 text-right">
-      <blockquote class="blockquote mb-0">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
+  <div class="card p-3">
+    <blockquote class="blockquote mb-0 card-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <footer class="blockquote-footer">
+        <small>
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img" src="..." alt="Card image">
+  </div>
+  <div class="card p-3 text-right">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div> -->
 
-  <!-- <button id="clickBtn" #clickBtn class="btn btn-secondary" (click)="scroll(addressTarget)">Click Me Please!</button> -->
+<!-- <button id="clickBtn" #clickBtn class="btn btn-secondary" (click)="scroll(addressTarget)">Click Me Please!</button> -->
