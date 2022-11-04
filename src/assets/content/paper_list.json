@@ -1,0 +1,19 @@
+[
+    {
+        "title": "On Determining and Qualifying the Number of Superstates in Aggregation of Markov Chains.",
+        "authors": "Amber Srivastava, SM Salapaka",
+        "year" : "2020",
+        "link": "https://arxiv.org/pdf/2010.05341.pdf",
+        "doi_arxiv_id": "arXiv:2010.05341",
+        "is_published_not_preprint" : "false"
+    },
+    {
+        "title": "Parameterized MDPs and Reinforcement Learning Problems--A Maximum Entropy Principle Based Framework.",
+        "authors": "Amber Srivastava, Srinivasa Salapaka",
+        "year" : "2020",
+        "link": "http://salapaka.web.engr.illinois.edu/pdfs/2020_ParameterizedMDPs_ArXiv_Srivastava.pdf",
+        "doi_arxiv_id": "arXiv:2006.09646",
+        "is_published_not_preprint" : "false"
+    }
+
+]

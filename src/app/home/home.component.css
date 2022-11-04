@@ -33,16 +33,16 @@
     -webkit-line-clamp: 4; /* number of lines to show */
             line-clamp: 4; 
     -webkit-box-orient: vertical;
- }
+}
 
- .text-news-content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6; /* number of lines to show */
-            line-clamp: 6; 
-    -webkit-box-orient: vertical;
- }
+.text-news-content {
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 6; /* number of lines to show */
+        line-clamp: 6; 
+-webkit-box-orient: vertical;
+}
 
 /* carousel style */
 @media (max-width: 767px) {

@@ -7,6 +7,7 @@ import { RouterStateSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { StudentsComponent } from './students/students.component';
 import { ProjectComponent } from './project/project.component';
+import { PublicationComponent } from './publication/publication.component';
 
 var hero:any;
 const pi_details_path = '../assets/pi_description.json'
@@ -20,8 +21,9 @@ const routes: Routes = [
   ]},
   {path: 'students/current_students', component: StudentsComponent},
   {path: 'students/past_students', component: StudentsComponent},
-  {path: 'projects', component: ProjectComponent},
-  {path: 'projects/:project_link_name', component: ProjectComponent},
+  {path: 'research', component: ProjectComponent},
+  {path: 'research/:project_link_name', component: ProjectComponent},
+  {path: 'publications', component: PublicationComponent}
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { StudentsComponent } from './students/students.component';
 import { StudentSnippetComponent } from './student-snippet/student-snippet.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectSnippetComponent } from './project-snippet/project-snippet.component';
+import { PublicationComponent } from './publication/publication.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProjectSnippetComponent } from './project-snippet/project-snippet.compo
     StudentsComponent,
     StudentSnippetComponent,
     ProjectComponent,
-    ProjectSnippetComponent
+    ProjectSnippetComponent,
+    PublicationComponent
   ],
   imports: [
     BrowserModule,

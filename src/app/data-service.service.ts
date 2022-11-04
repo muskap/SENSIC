@@ -14,6 +14,7 @@ export class DataServiceService {
   private news_list_path: string = "assets/content/news_list.json";
   private images_base_path: string ="../../assets/content";
   private student_info_base_path:string = "../../assets/content";
+  private paper_list_path:string = "assets/content/paper_list.json";
 
   constructor(private http: HttpClient) { }
 
@@ -56,6 +57,11 @@ export class DataServiceService {
       return of();
     }
 
+  }
+
+  //user can get the list of papers..
+  public getPapers():Observable<any>{
+    return this.http.get(this.paper_list_path);
   }
 
 
