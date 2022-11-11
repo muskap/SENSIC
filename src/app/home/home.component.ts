@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     items.forEach(el => {
       // console.log(el);
       let next = el.nextElementSibling;
-      for(var i=1; i < 4; i++){
+      for(var i=1; i < 6; i++){
         if(!next){
           next = items[0];
         }

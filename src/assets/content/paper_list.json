@@ -14,6 +14,30 @@
         "link": "http://salapaka.web.engr.illinois.edu/pdfs/2020_ParameterizedMDPs_ArXiv_Srivastava.pdf",
         "doi_arxiv_id": "arXiv:2006.09646",
         "is_published_not_preprint" : "false"
+    },
+    {
+        "title": "Some Random Dummy Paper",
+        "authors": "Mustafa Kapadia",
+        "year" : "2022",
+        "link": "http://salapaka.web.engr.illinois.edu/pdfs/2020_ParameterizedMDPs_ArXiv_Srivastava.pdf",
+        "doi_arxiv_id": "arXiv:2006.09646",
+        "is_published_not_preprint" : "false"
+    },
+    {
+        "title": "Some Random Dummy Paper",
+        "authors": "Mustafa Kapadia",
+        "year" : "2005",
+        "link": "http://salapaka.web.engr.illinois.edu/pdfs/2020_ParameterizedMDPs_ArXiv_Srivastava.pdf",
+        "doi_arxiv_id": "arXiv:2006.09646",
+        "is_published_not_preprint" : "false"
+    },
+    {
+        "title": "Some Other Random Dummy Paper",
+        "authors": "Mustafa Kapadia",
+        "year" : "2001",
+        "link": "http://salapaka.web.engr.illinois.edu/pdfs/2020_ParameterizedMDPs_ArXiv_Srivastava.pdf",
+        "doi_arxiv_id": "arXiv:2006.09646",
+        "is_published_not_preprint" : "false"
     }
 
 ]
