@@ -14,6 +14,7 @@ export class AppComponent {
   public static PIEmail:String = 'salap2@illinois.edu';
   public projectList = [{name: "", link_name:""}];
   public princInvestigator:string;
+  public publicationspage:string = "";
 
   constructor(private dataService : DataServiceService) {
     //subscribe to the data reception event....
@@ -21,6 +22,7 @@ export class AppComponent {
     this.dataService.getPIData().subscribe((data) => {
       console.log(data);
       this.princInvestigator += data.firstName + ' '+ data.lastName;
+      this.publicationspage = data.profiles.google_scholar;
     });
 
     //get the list of projects....

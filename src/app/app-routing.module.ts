@@ -23,7 +23,6 @@ const routes: Routes = [
   {path: 'students/past_students', component: StudentsComponent},
   {path: 'research', component: ProjectComponent},
   {path: 'research/:project_link_name', component: ProjectComponent},
-  {path: 'publications', component: PublicationComponent}
 ];
 
 @NgModule({
