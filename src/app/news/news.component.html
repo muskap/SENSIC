@@ -1,0 +1,40 @@
+<h2 class="text-center my-4">Recent News</h2>
+
+
+<div class="row mx-auto mb-2">
+  <div id="recipeCarousel" class="carousel slide w-100 clearfix" data-ride="carousel" data-interval="5000">
+      <div class="carousel-inner" role="listbox">
+          <div *ngFor="let ni of news_items; let i = index" class="carousel-item" [class.active] ="i == 0">
+              <div class="col-md-12 col-lg-6">
+                <div class="card"> <!--style="height: 450px;"-->
+                  <div class="align-bottom">
+                    <div class="cropped-ofp mx-auto">
+                      <img *ngIf = "ni.news_image_path" class="card-img-top" [src]="this.images_base_path+'/'+ ni.news_image_path" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                      <div> <!--style="height: 25px;"-->
+                        <h5 class="card-title text-news-title">{{ni.news_title}} </h5>
+                      </div>
+                      <div> <!--style="height: 50px;"-->
+                        <p *ngIf = "ni.news_content text-news-content" class="card-text">{{ni.news_content}}</p>
+                      </div>
+                      <div> <!--style="height: 20px;"-->
+                        <a *ngIf="ni.news_link != ''" [href]="ni.news_link" target="_blank" rel="noopener noreferrer">
+                          <small>Read More <i class="fa-solid fa-chevron-right"></i></small>
+                        </a>
+                      </div>
+                      <p class="card-text text-center"><small class="text-muted">{{ni.news_date}}</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-slide="prev">
+          <span class="fa-solid fa-chevron-left text-dark" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-slide="next">
+          <span class="fa-solid fa-chevron-right text-dark" aria-hidden="true"></span>
+      </a>
+  </div>
+</div>

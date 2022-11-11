@@ -11,6 +11,7 @@ import { StudentSnippetComponent } from './student-snippet/student-snippet.compo
 import { ProjectComponent } from './project/project.component';
 import { ProjectSnippetComponent } from './project-snippet/project-snippet.component';
 import { PublicationComponent } from './publication/publication.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PublicationComponent } from './publication/publication.component';
     StudentSnippetComponent,
     ProjectComponent,
     ProjectSnippetComponent,
-    PublicationComponent
+    PublicationComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
