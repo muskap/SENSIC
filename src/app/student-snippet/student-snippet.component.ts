@@ -19,6 +19,8 @@ export class StudentSnippetComponent implements OnInit {
   public studentGithub:string = "";
   public studentImage:string = "";
   public images_base_path:string = "";
+  public acad_history:any[] = [];
+  public activeStudent:boolean = false;
   
   constructor(private dataService: DataServiceService) {
 
@@ -38,8 +40,16 @@ export class StudentSnippetComponent implements OnInit {
       this.studentGithub = data.profiles.github;
       this.studentImage =  this.images_base_path + "/"+ data.image_path;
       console.log(this.studentImage);
+      this.acad_history = data.acad_history;
+      console.log(this.acad_history);
     });
 
+  }
+
+  //user can activate to view student details
+  public toggleStudentActivation():void{
+    console.log("activating:", this.studentFName)
+    this.activeStudent = !this.activeStudent;
   }
 
 }

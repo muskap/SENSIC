@@ -13,8 +13,30 @@
             <a *ngIf="studentGithub" [href]="studentGithub" target="_blank" rel="noopener noreferrer" class="btn btn-light ml-1" [title]="studentGithub"><span class="fa-brands fa-github"></span></a>
         </div>
 
+        <div (click)="toggleStudentActivation()" class="details_pane px-3 text-center" [class.active] = "activeStudent">
+            <!-- <ul class="timeline">
+                <li *ngFor="let hist of acad_history" class="timeline-item mb-3">
+                    <p class="card-subtitle mb-1">
+                        {{hist.year ? hist.year : 'Sometime'}} : {{hist.level ? hist.level : 'something'}}, {{hist.department ? hist.department : 'something'}}
+                    </p>
+                    <p class="text-muted">{{hist.institute ? hist.institute : 'Somewhere'}}</p>
+                </li>
+            </ul> -->
+            <span class="fa-solid fa-chevron-up details_pane_caret"></span>
+            <ul *ngIf="activeStudent" class="timeline-with-icons text-left">
+                <li *ngFor="let hist of acad_history" class="timeline-item mb-2">
+                  <span class="timeline-icon">
+                    <i class="test-secondary fa-solid fa-graduation-cap"></i>
+                  </span>
+            
+                  <h6 class="fw-bold" style="margin-left: -15px;">{{hist.level ? hist.level : 'something'}}, {{hist.department ? hist.department : 'something'}}</h6>
+                  <p class="text-small mb-0" style="margin-left: -15px;">{{hist.institute ? hist.institute : 'Somewhere'}}, {{hist.year ? hist.year : 'Sometime'}}</p>
+                </li>
+            </ul>
+        </div>
+
         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-      </div>
+    </div>
     <!-- <h5 class="card-title">Mustafa Kapadia</h5>
     <h6 class="card-subtitle">M.S. Mechanical Engineering</h6> -->
     

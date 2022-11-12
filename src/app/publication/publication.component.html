@@ -72,12 +72,12 @@
         <div *ngFor = "let paper of filt_paper_list" class="col-lg-3 col-md-4 mb-1">
           <a [href]="paper.link" class="" target="_blank" rel="noopener noreferrer">
             <div class="mb-1 card">
-              <div class="cropped-ofp mx-auto p-1">
+              <div class="cropped-ofp mx-auto p-1 d-none d-sm-block">
                   <img src="../../assets/content/pdf_img.png" class="card-img-top" style="margin:auto">
               </div>
               <div class="card-body">
                 <p class="card-text text-pub-prepr"><small class="text-dark font-weight-bold">{{paper.is_published_not_preprint == "true"? "DOI" : "Preprint"}} &RightTriangle; {{paper.doi_arxiv_id}} ({{paper.year}})</small></p>
-                <p class="card-text text-center text-pub-content">{{paper.title}}</p>
+                <p class="card-text text-center text-pub-content"> <span class="d-inline d-sm-none fa-solid fa-file-pdf text-danger" style="font-size: 1.5em;"></span> {{paper.title}}</p>
                 <p class="card-text text-pub-authors"><small class="text-dark text-right">- {{paper.authors}}</small></p>
               </div>
             </div>

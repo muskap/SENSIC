@@ -1,6 +1,6 @@
 .cropped-ofp {
-    max-width: 200px; 
-    max-height: 200px;
+    max-width: 120px; 
+    max-height: 120px;
     overflow: hidden;
     object-fit: scale-down;
     /* object-position: 25% 25%;  */
