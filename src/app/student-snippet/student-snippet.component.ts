@@ -20,6 +20,7 @@ export class StudentSnippetComponent implements OnInit {
   public studentImage:string = "";
   public images_base_path:string = "";
   public acad_history:any[] = [];
+  public researh_interests:string[] = [];
   public activeStudent:boolean = false;
   
   constructor(private dataService: DataServiceService) {
@@ -42,6 +43,8 @@ export class StudentSnippetComponent implements OnInit {
       console.log(this.studentImage);
       this.acad_history = data.acad_history;
       console.log(this.acad_history);
+      this.researh_interests = data.research_interests;
+      console.log(this.researh_interests);
     });
 
   }

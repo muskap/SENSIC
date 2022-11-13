@@ -23,7 +23,8 @@
                 </li>
             </ul> -->
             <span class="fa-solid fa-chevron-up details_pane_caret"></span>
-            <ul *ngIf="activeStudent" class="timeline-with-icons text-left">
+            <p class="card-text font-weight-bold">History</p>
+            <ul class="timeline-with-icons text-left">
                 <li *ngFor="let hist of acad_history" class="timeline-item mb-2">
                   <span class="timeline-icon">
                     <i class="test-secondary fa-solid fa-graduation-cap"></i>
@@ -33,6 +34,10 @@
                   <p class="text-small mb-0" style="margin-left: -15px;">{{hist.institute ? hist.institute : 'Somewhere'}}, {{hist.year ? hist.year : 'Sometime'}}</p>
                 </li>
             </ul>
+            <p class="card-text font-weight-bold">Research Areas</p>
+            <p class="card-text">
+                <span *ngFor="let ri of researh_interests" class="badge badge-pill badge-dark mx-1">{{ri}}</span>
+            </p>
         </div>
 
         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->

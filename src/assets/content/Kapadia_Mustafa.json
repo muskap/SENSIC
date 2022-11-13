@@ -15,5 +15,5 @@
     "acad_history": [
         {"year": "2018", "level": "B.Tech", "department": "Mechanical Engineering", "institute":"V.J.T.I"}
     ],
-    "researh_interests": [ "Optimization", "System Identification", "Machine Learning", "Reinforcement Learning"]
+    "research_interests": [ "Optimization", "System Identification", "Machine Learning", "Reinforcement Learning"]
 }

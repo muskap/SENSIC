@@ -36,7 +36,7 @@
 
 .details_pane.active{
     height: 100%;
-    background-color: #ffffff79;
+    background-color: #ffffffb9;
 }
 
 .details_pane.active>.details_pane_caret{
