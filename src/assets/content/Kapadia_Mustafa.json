@@ -13,6 +13,8 @@
         "github": "https://www.github.com/muskap"
     },
     "acad_history": [
+        {"year": "2018", "level": "B.Tech", "department": "Mechanical Engineering", "institute":"V.J.T.I"},
+        {"year": "2018", "level": "B.Tech", "department": "Mechanical Engineering", "institute":"V.J.T.I"},
         {"year": "2018", "level": "B.Tech", "department": "Mechanical Engineering", "institute":"V.J.T.I"}
     ],
     "research_interests": [ "Optimization", "System Identification", "Machine Learning", "Reinforcement Learning"]
