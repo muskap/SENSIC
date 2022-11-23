@@ -23,7 +23,7 @@
     {
         "news_title": "Mayank Baranwal (Scientist TCS Research, PhD'18) join's IIT Bombay, India as Adjunct Professor.",
         "news_content": "",
-        "news_image_path": "",
+        "news_image_path": "Baranwal_Mayank.png",
         "news_date": "January 2021" ,
         "news_link": ""
     },
@@ -39,6 +39,13 @@
         "news_content": "",
         "news_image_path": "",
         "news_date": "August 2021" ,
+        "news_link": ""
+    },
+    {
+        "news_title": "Mayank Baranwal Awarded 'Young Scientist' Award at TCS Research.",
+        "news_content": " Young Scientist Award is given to excellent research scientist under the age of 40 at TCS Research",
+        "news_image_path": "Baranwal_Mayank.png",
+        "news_date": "November 2022" ,
         "news_link": ""
     }
 ]
